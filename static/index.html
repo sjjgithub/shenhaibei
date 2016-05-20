@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="format-detection" content="telephone=no">
+<title>深海贝类-首页</title>
+<link rel="stylesheet" type="text/css" href="../css/basic.css" />
+<link rel="stylesheet" type="text/css" href="../css/theme.css" />
+<link rel="stylesheet" type="text/css" href="../css/common.css" />
+</head>
+<body>
+<div class="wrapper">
+	<div id="slideBox" class="slideBox pr oh">
+		<div class="bd pr">
+			<ul>
+				<li><a class="pic" href="#"><img src="../images/img/slide1.jpg" alt="图片" /></a></li>
+				<li><a class="pic" href="#"><img src="../images/img/slide2.jpg" alt="图片" /></a></li>			
+			</ul>
+		</div>
+		<div class="hd pa">
+			<ul></ul>
+		</div>
+	</div>
+	<div class="micro_mall clearfix pr">
+		<div class="fl portrait pa">
+			<span class="pr"><img src="../images/img/portrait.jpg" /><img src="../images/portraitbg.png" class="portraitBg pa" /></span>
+		</div>
+		<div class="fr micro_mallName">
+			<h1 class="f6">深海贝类生活馆</h1>
+			<h2 class="f3 pl20 color6">shenghai</h2>
+		</div>
+	</div>
+	<section class="goodList">
+		<h1 class="sortTitle f7"><a href="#">女装</a></h1>
+		<div class="clearfix">
+			<div class="fl goodsInfo">
+				<a href="#" class="goodsImg"><img src="../images/img/goods1.jpg" class="response_img" alt="图片" /></a>
+				<a href="#" class="goodsName f3">深海贝类韩国代购黑白拼接呢绒连衣裙</a>
+				<p class="red f6">￥433.00</p>
+			</div>
+			<div class="fl goodsInfo">
+				<a href="#" class="goodsImg"><img src="../images/img/goods2.jpg" class="response_img" alt="图片" /></a>
+				<a href="#" class="goodsName f3">深海贝类韩国代购黑白拼接呢绒</a>
+				<p class="red f6">￥433.00</p>
+			</div>
+			<div class="fl goodsInfo">
+				<a href="#" class="goodsImg"><img src="../images/img/goods1.jpg" class="response_img" alt="图片" /></a>
+				<a href="#" class="goodsName f3">深海贝类韩国代购黑白拼接呢绒连衣裙</a>
+				<p class="red f6">￥433.00</p>
+			</div>
+			<div class="fl goodsInfo">
+				<a href="#" class="goodsImg"><img src="../images/img/goods2.jpg" class="response_img" alt="图片" /></a>
+				<a href="#" class="goodsName f3">深海贝类韩国代购黑白拼接呢绒</a>
+				<p class="red f6">￥433.00</p>
+			</div>
+		</div>
+	</section>
+</div>
+<a class="Service block f3" href="#">联系客服</a>
+<footer>
+	<div class="inner_footer clearfix f7">
+		<a href="#" class="fl tc in_b">微商城</a>
+		<a href="#" class="fl tc in_b">客服管理</a>
+		<a href="#" class="fl tc in_b">个人中心</a>
+	</div>
+</footer>
+<script src="../js/jquery-1.8.2.min.js"></script>
+<script src="../js/TouchSlide.1.1.js"></script>
+<script src="../js/public.js"></script>
+<script type="text/javascript">
+$(function(){
+	var obj = false;
+	if( $("#slideBox").find("li").size()>1 ){
+		obj = true;
+	}
+	TouchSlide({ 
+		slideCell:"#slideBox",
+		titCell:".hd ul", //开启自动分页 autoPage:true ，此时设置 titCell 为导航元素包裹层
+		mainCell:".bd ul", 
+		effect:"leftLoop", 
+		autoPage:true,//自动分页
+		autoPlay:obj, //自动播放
+		interTime:3000
+	});
+	
+	var item = $("#slideBox .hd li").length;
+	$(".slideBox .hd li").last().addClass("last");
+	var hdW = item*18-8;
+	$("#slideBox .hd").width( hdW );
+	$("#slideBox .hd").css("margin-left",-hdW/2);
+	if( item<2 ){
+		$("#slideBox .hd").remove();
+	};
+	$(".goodsInfo").each(function() {
+		$(this).width( 298/640*100+"%" );
+        if (($(this).index() + 1) % 2 == 0) {
+            $(this).addClass("goodsMargin");
+        }
+    });
+	var marginW = 14/298*100+"%";
+	$(".goodsInfo a").width( 270/298*100+"%");
+	$(".goodsInfo a").css({"margin-left":marginW,"margin-top":marginW,"margin-right":marginW});
+	$(".goodsInfo p").css({"margin-left":marginW,"margin-right":marginW,"margin-top":"3%"});
+});	
+</script>
+</body>
+</html>

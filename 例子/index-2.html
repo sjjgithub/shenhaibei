@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>Examples</title>
+<meta name="description" content="">
+<meta name="keywords" content="">
+<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<!-- 视口大小  原始比例1.0  最大缩放1.0 最小缩放1.0  不让用户缩放 -->
+<meta name="apple-mobile-web-app-capable" content="yes">
+<!-- 在苹果手机里面 看上去像app应用 -->
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<!-- 苹果手机的状态栏是 黑色 -->
+<link href="css/reset.css" rel="stylesheet">
+<style>
+    html{ font-size: 14px;}
+    body{ font-family: "Microsoft Yahei"; background-color: rgb(230,230,230)}
+    h1,h2,h3,h4,h5,h6{ color:#333;}
+    .t-c{ text-align: center;}
+    .response_img{max-width: 100%; height: auto;}
+
+    /* 本例子css -------------------------------------- */
+    .slideBox{ position:relative; overflow:hidden; margin:0px auto;  max-width:100%;/* 设置焦点图最大宽度 */ }
+    .slideBox .hd{ position:absolute; height:28px; line-height:28px; bottom:0; right:0; z-index:1; }
+    .slideBox .hd li{ display:inline-block; width:5px; height:5px; -webkit-border-radius:5px; -moz-border-radius:5px; border-radius:5px; background:#333; text-indent:-9999px; overflow:hidden; margin:0 6px;   }
+    .slideBox .hd li.on{ background:#fff;  }
+    .slideBox .bd{ position:relative; z-index:0; }
+    .slideBox .bd li{ position:relative; text-align:center;  }
+    .slideBox .bd li img{ background:url(images/loading.gif) center center no-repeat;  vertical-align:top; width:100%;/* 图片宽度100%，达到自适应效果 */}
+    .slideBox .bd li a{ -webkit-tap-highlight-color:rgba(0,0,0,0);  }  /* 去掉链接触摸高亮 */
+    .slideBox .bd li .tit{ display:block; width:100%;  position:absolute; bottom:0; text-indent:10px; height:28px; line-height:28px; background:url(images/focusBg.png) repeat-x; color:#fff;  text-align:left;  }
+    header{ height: 5rem; background-color: #fff; position: relative; }
+    header .qr{ width:5rem; display: block; height:5rem; overflow: hidden;border-radius: 5rem; box-shadow: 0px 0px 8px #999; position: absolute; left:1rem; top:-2.5rem; border: 4px solid #f0f0f0;}
+    header h1{ padding-top: 1rem; font-size: 1rem; font-weight: normal;}
+    header h1 span{ background: url(images/weixin.png) no-repeat left center;  height: 1.2rem; background-size: auto 100%; font-size: 0.7rem; padding-left: 1.5rem; color: #999; }
+    .fl-title{ margin-left: 0.5rem; border-left:4px solid rgb(182,20,30); height: 2rem; line-height: 2rem; margin-top: 1.5rem; margin-bottom: 0.7rem; padding-left: 0.7rem;}
+    .item-box{ }
+    .item-box>li{ width: 45%; float: left; margin-bottom: 3.33333%;}
+    .item-box>li>a{ padding:4%;  display: block; background-color: #fff; width: 100%;}
+    .item-box .item-title{ height: 3rem; line-height: 1rem; margin-top: 0.5rem;}
+   .item-box>li:nth-child(2n+1){ margin-left: 3.333%; margin-right: 3.333%; }
+  .price{ color: #E06827; font-size: 1.1rem;}
+</style>
+<script src="js/TouchSlide.1.1.js"></script>
+</head>
+<body>
+    <!-- 本例主要代码 Start ================================ -->
+            <div id="slideBox" class="slideBox">
+
+                <div class="bd">
+                    <ul>
+                            <li>
+                                <a class="pic" href="#"><img src="images/img/slide1.jpg" /></a>
+                                
+                            </li>
+                            <li>
+                                <a class="pic" href="#"><img src="images/img/slide2.jpg"/></a>
+                               
+                            </li>
+                           
+                           
+                    </ul>
+                </div>
+
+                <div class="hd">
+                    <ul></ul>
+                </div>
+            </div>
+            <script type="text/javascript">
+                TouchSlide({ 
+                    slideCell:"#slideBox",
+                    titCell:".hd ul", //开启自动分页 autoPage:true ，此时设置 titCell 为导航元素包裹层
+                    mainCell:".bd ul", 
+                    effect:"leftLoop", 
+                    autoPage:true,//自动分页
+                    autoPlay:true, //自动播放
+                    interTime:5000
+                });
+            </script>
+            <!-- 本例主要代码 End ================================ -->
+            <header>
+                <a href="" class="qr"><img src="images/img/portrait.jpg" alt="" class="response_img"></a>
+                <h1 class="t-c">深海贝类生活馆<br/>
+                    <span>shenghai</span></h1>
+            </header>
+            <article>
+                <section class="floor1 fl">
+                    <h3 class="fl-title">女装</h3>
+                    <ul class="item-box clearfix">
+                        <li><a href="">
+                                <img src="images/img/goods1.jpg" alt="" class="response_img">
+                                <h4 class="item-title">深海贝类韩国代购黑白拼接呢绒连衣裙</h4>
+                                <p class="price">￥4330</p>
+                            </a></li>
+                        <li><a href="">
+                                <img src="images/img/goods2.jpg" alt="" class="response_img">
+                                <h4 class="item-title">深海贝类韩国代购黑白拼接呢绒</h4>
+                                <p class="price">￥4330</p>
+                            </a></li>
+                        <li><a href="">
+                                <img src="images/img/goods1.jpg" alt="" class="response_img">
+                                <h4 class="item-title">深海贝类韩国代购黑白拼接呢绒连衣裙</h4>
+                                <p class="price">￥4330</p>
+                            </a></li>
+                        <li><a href="">
+                                <img src="images/img/goods2.jpg" alt="" class="response_img">
+                                <h4 class="item-title">深海贝类韩国代购黑白拼接呢绒</h4>
+                                <p class="price">￥4330</p>
+                            </a></li>
+                    </ul>
+                </section>
+            </article>
+
+</body>
+</html>

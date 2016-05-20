@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>Examples</title>
+<meta name="description" content="">
+<meta name="keywords" content="">
+<link href="" rel="stylesheet">
+<style>
+    *{ margin: 0; padding: 0; box-sizing:border-box;}
+    ul{ list-style: none;}
+
+    a{ text-decoration: none; color: #333}
+    a:hover{ color: #000;}
+    .list{ height: 43px; line-height: 43px; padding-left: 1em; padding-right: 1em; color: #333; border-bottom:1px solid #ddd;}
+    /*高， 行高 ，左边有距离  右边有点   下边有根线*/
+    .check-item{ margin-right: 4em; cursor: pointer;}
+    /*两那个按钮见有点距离    让鼠标是手形*/
+    .circle{ border: 1px solid #999; display: inline-block; width: 29px; height: 29px; border-radius: 29px; margin-top: 7px; vertical-align: top; margin-right: 0.3em;  transition: all 0.2s ease;}
+    /*设置圆{ 边框，转换为行内的块，给个宽 高度 圆角 -->圆; 距离上边是7px； 垂直对齐：顶对齐； 圆与文字有点距离，动画过渡效果}*/
+    .check-item input:checked+.circle{ background-color: #1CDCE6; border:none; position: relative; }
+    /*label 里面的被选中的input 后面的兄弟元素 .circle{ 背景颜色 边框； 相对定位}*/
+    .check-item input{ display: none;}
+    /*让 lable input 默认隐藏*/
+    .check-item input+.circle:before{ content: ""; display: inline-block; width:0; height: 0; transition: all 0.2s ease; }
+    /*让 circle 里面的勾先宽高为0 ->为了动画过渡效果*/
+     .check-item input:checked+.circle:before{ content: ""; display: inline-block; height: 7px; width: 12px; position: absolute; border-right:1px solid #fff; border-top:1px solid #fff; left:50%; top: 50%; 
+     transform:rotate(135deg) translate(0,100%);}
+     /*label 里面 被选择中的input后面的兄弟元素的before{ 内容空 ，转换为行内块； 高； 宽，距离左边 上边50%； 旋转135；位移一下}*/
+</style>
+</head>
+<body>
+  <ul>
+      <li class="list">
+          
+          <label class="check-item"><input type="radio" name="r1" checked/><span class="circle"></span>报装1 </label>
+
+          <label  class="check-item"><input type="radio" name="r1"/><span class="circle"></span>报装2 </label>
+          </li>
+  </ul>
+</body>
+</html>

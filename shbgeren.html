@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>深海贝</title>
+	<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<!-- 视口大小  原始比例1.0  最大缩放1.0 最小缩放1.0  不让用户缩放 -->
+<meta name="apple-mobile-web-app-capable" content="yes">
+<!-- 在苹果手机里面 看上去像app应用 -->
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<!-- 苹果手机的状态栏是 黑色 -->
+
+<link rel="stylesheet" href="css/reset.css">
+<script src="js/TouchSlide.1.1.js"></script>
+<style>
+	html{font-size:18px;}
+	body{font-size: 12px;font-family: roboto, \65B9\6B63\5170\4EAD\7EA4\9ED1\7B80\4F53, \5FAE\8F6F\96C5\9ED1, "Helvetica Neue", Helvetica,Arial, sans-serif;/*background: rgb(230,230,230);*//*padding-top: 43px;*/}
+     .text-center{text-align: center;}
+	
+	.head{ position:relative; overflow:hidden; margin:0px auto;  max-width:100%;/* 设置焦点图最大宽度 */ }
+	/*.head .bd{ position:relative; z-index:0; }*/
+	/*.head .bd li{ position:relative; text-align:center;  }*/
+	.head .bd li img{  vertical-align:top; width:100%;/* 图片宽度100%，达到自适应效果 */}
+	
+	
+
+	.header{height: 55px;background-color: #fff;line-height: 18px;position: relative; }
+	.header h1{font-size:14px;color:#222;line-height: 14px;font-weight: normal;margin-left: 50%;margin-top: 5px;}
+	.header span{font-size: 11px;color:#777;/*display: block;*/}
+	
+	 .portrait{position: absolute;left: 2%;top:-5rem;width: 132px;height: 132px;overflow: hidden;padding: 0.2rem;/*border-radius:3rem;box-shadow:2px 3px 8px #666;background-color: #fff;*/}
+	 .portrait img{width: 100%;height:auto;}
+
+	 .lovelist li{float: left;margin-left: 5px;}
+	 .lovelist{margin-left: 2%;overflow: hidden;border-bottom: 1px solid rgb(230,230,230)}
+	 .lovelist input{font-size: 12px;color: #fff;border:none;padding-left: 1rem;padding-right: 1rem;height: 25px;margin-bottom: 5px;}
+     .lov1 input{background-color: rgb(234,145,39);}
+     .lov2 input{background-color: rgb(28,133,141);}
+     .lov3 input{background-color: rgb(15,98,115);}
+     .lov4 input{background-color: rgb(227,89,40);}
+     .lov5 input{background-color: rgb(28,133,141);}
+     .lov6 input{background-color: rgb(227,89,40);}
+      .pingjia{width: 96%;margin-left: 2%}
+      .pingjia li{height: auto;line-height: 1.2rem;overflow: hidden;padding-top: 0.5rem;padding-bottom: 0.5rem}
+      .pingjia li:nth-child(1){border-bottom: 1px solid rgb(230,230,230)}
+      .pingjia li:nth-child(2){border-bottom: 1px solid rgb(230,230,230)}
+      .pingjia img{width: 1rem;height: 1rem;margin-right: 5px;}
+      .pingjia h4{width: 25%;display: inline-block;}
+      .pingjia span{width:71% ;/*margin-left: 28%;*/font-size: 14px;float: right}
+      .satis h3:before{content:"";display: inline-block;height: 1px;background-color: rgb(46,156,158);width:20% ;margin-bottom: 0.3rem;margin-right:0.5rem}
+      .satis h3:after{content:"";display: inline-block;height: 1px;background-color: rgb(46,156,158);width:20%;margin-bottom: 0.3rem ;margin-left:0.5rem}
+      .satis h3{color: rgb(46,156,158);font-weight: normal;margin-top: 0.5rem;margin-bottom: 0.5rem}
+      /* 本例子css -------------------------------------- */
+	.slideBox{ position:relative;width:100%;  height:auto; overflow:hidden; margin:10px auto; }
+	.slideBox .hd{ position:absolute; width:100%;  height:27px; bottom:50%; left:0; z-index:1; }
+	.slideBox .hd img{ width:11px;  }
+	.slideBox .prev,.slideBox .next{ position:absolute; left:0; top:0; display:block; width:23px; height:27px; line-height:27px; text-align:center;   }
+	.slideBox .next{ left:auto; right:0;}
+	.slideBox .bd{ position:relative; z-index:0; }
+	.slideBox .bd li{ position:relative; }
+	.slideBox .bd li img{ width:100%;  height:auto; display:block;   }
+	.slideBox .bd li a{ -webkit-tap-highlight-color:rgba(0, 0, 0, 0); /* 取消链接高亮 */  }
+	.slideBox .bd li .tit{ display:block; width:100%;  position:absolute; bottom:0; text-indent:10px; height:27px; line-height:27px;  text-align:center;  color:#ffffff; }
+
+  /*    /* 本例子css -------------------------------------- */
+/*	.slideBox{ position:relative; overflow:hidden; margin:0px auto;  max-width:100%;/* 设置焦点图最大宽度 */ /*}
+	.slideBox .hd{ position:absolute; height:28px; line-height:28px; bottom:0; right:0; z-index:1; }*/
+	/*.slideBox .hd li{ display:inline-block; width:5px; height:5px; -webkit-border-radius:5px; -moz-border-radius:5px; border-radius:5px; background:#333; text-indent:-9999px; overflow:hidden; margin:0 6px;   }
+	.slideBox .hd li.on{ background:#fff;}*/
+	/*.slideBox .bd{ position:relative; z-index:0; }*/
+	/*.slideBox .bd li{ position:relative; text-align:center;  }
+	.slideBox .bd li img{ background:url(images/loading.gif) center center no-repeat;  vertical-align:top; width:100%;*//* 图片宽度100%，达到自适应效果 }*/
+	/*.slideBox .bd li a{ -webkit-tap-highlight-color:rgba(0,0,0,0);  } */ /* 去掉链接触摸高亮 */
+	/*.slideBox .bd li .tit{ display:block; width:100%;  position:absolute; bottom:0; text-indent:10px; height:28px; line-height:28px; background:url(images/focusBg.png) repeat-x; color:#fff;  text-align:left;  }*/
+ 
+
+
+	
+	.footer { height: 43px; width: 100%; position: fixed; left:0; bottom: 0px; background-color: #fff;}
+	.footnav li{line-height: 43px;width: 50%;height: 43px;text-align: center;float: left;border: 1px solid rgb(192,192,192);/*border-right: 1px solid #ddd;*/}
+	.picturebox{padding-bottom: 43px;}
+
+	.footer img{width: 1.5rem;height:1.5rem;margin-right: 0.5rem;margin-bottom: 0.3rem}
+	.footnav a{ height: 43px;width: 100%;display: block;}
+	.pic{min-width: 100%;height: auto;vertical-align: middle;}
+	
+	@media screen and (min-width: 568px){ .picture{width: 30%;}
+     .picturelist .picture:nth-child(2n){margin-left:0; }
+	.picturelist .picture:nth-child(3n+2){margin-left:5%;margin-right: 5% }
+	
+
+	}
+	@media screen and (min-width: 736px){ .picture{width: 23%;}
+     .picturelist .picture:nth-child(2n){margin-left:0; }
+	.picturelist .picture:nth-child(3n+2){margin-left:0;margin-right: 0 }
+	.picturelist .picture:nth-child(4n+2){margin-left:2.66%;margin-right:2.66% }
+	.picturelist .picture:nth-child(4n+3){margin-right:2.66% }
+	
+	}
+</style> 
+<link rel="stylesheet" href="css/sm.css" media=" screen and (min-width: 568px)">
+<link rel="stylesheet" href="css/mid.css" media=" screen and (min-width: 736px)">
+</head> 
+<body> 
+	<!-- 本例主要代码 Start ================================ -->
+			<div id="head" class="head">
+				<div class="bd">
+					<ul>
+							<li>
+								<a class="pic" href="#"><img src="images/img/bg.jpg" /></a>
+							</li>
+					</ul>
+				</div>
+			</div>
+			
+			<!-- 本例主要代码 End ================================ -->
+         <header class="header ">
+         	<h1>昵称<span> &nbsp在线</br>女 28岁 上海市静安区</br>距您10公里全程服务30次 &nbsp全程服务30次</span>
+         	</h1>
+         	<a href="" class="portrait"><img src="images/img/portrait.jpg"  alt=""></a>
+         </header>
+         <article class="love clearfix">
+         	<section  class="floor">
+         	 <ul class="lovelist ">
+         	<li class="lov1"> <input type="submit" value="金牛座"></li>
+         	<li class="lov2"><input type="submit" value="热爱手工艺"></li>
+         	<li class="lov3"><input type="submit" value="金牛座爱吃辣"></li>
+         	<li class="lov4"><input type="submit" value="喜欢雪"></li>
+         	<li class="lov5"><input type="submit" value="喜欢雪"></li>
+         	<li class="lov6"><input type="submit" value="永磨不变的好奇心"></li>	
+         	 </ul>
+
+         	 <ul class="pingjia">
+         	  <li><h4>平均评价</h4><span><img src="images/star.png" alt=""><img src="images/star.png" alt=""><img src="images/star.png" alt=""><img src="images/star.png" alt=""></span></li>
+
+         	   <li><h4>平均评价</h4><span>关心身边点滴，擅长多种风格穿着搭配，擅长色彩搭配，想为大家的生活增添美丽。</span></li>
+         	    <li><h4>平均评价</h4><span>关心身边点滴，擅长多种风格穿着搭配。</span></li>
+               
+               <div class="satis text-center"><h3>最满意的搭配</h3></div>
+         	 	
+         	 </ul>
+         	</section>
+  <!-- 本例主要代码 Start ================================ -->
+				<!-- 本例主要代码 Start ================================ -->
+			<div id="slideBox" class="slideBox">
+
+				<div class="bd">
+					<ul>
+						<li>
+							<a class="pic" href="#"><img src="images/img/servicedetail.jpg" /></a>
+							<a class="tit" href="#"></a>
+						</li>
+						<li>
+							<a class="pic" href="#"><img src="images/img/servicedetail.jpg"/></a>
+							<a class="tit" href="#"></a>
+						</li>
+						<li>
+							<a class="pic" href="#"><img src="images/img/servicedetail.jpg"/></a>
+							<a class="tit" href="#"></a>
+						</li>
+					</ul>
+				</div>
+
+				<div class="hd">
+					<span class="prev"><img src="images/slideprev.png"/></span>
+					<span class="next"><img src="images/slidenext.png"/></span>
+				</div>
+
+			</div>
+			<script type="text/javascript">
+				TouchSlide({ slideCell:"#slideBox", mainCell:".bd ul", effect:"leftLoop" 
+			});
+			</script>
+			<!-- 本例主要代码 End ================================ -->
+
+
+
+			</br>
+			</br> 
+
+			
+
+<footer class="footer">
+ <ul class="footnav">
+	    <li ><a href=""><img src="images/contact.png" alt="">聊天</a></li>
+		<li ><a href=""><img src="images/lock.png" alt="">绑定</a></li>
+		</ul>	
+</footer>
+
+</body>
+</html> 

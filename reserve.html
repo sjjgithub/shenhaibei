@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>深海贝</title>
+	
+	<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<!-- 视口大小  原始比例1.0  最大缩放1.0 最小缩放1.0  不让用户缩放 -->
+<meta name="apple-mobile-web-app-capable" content="yes">
+<!-- 在苹果手机里面 看上去像app应用 -->
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<!-- 苹果手机的状态栏是 黑色 -->
+<link rel="stylesheet" href="css/reset.css">
+<script src="js/TouchSlide.1.1.js"></script>
+<style>	
+html{font-size: 18px;}
+body{font-size: 14px;font-family:roboto, \65B9\6B63\5170\4EAD\7EA4\9ED1\7B80\4F53, \5FAE\8F6F\96C5\9ED1, "Helvetica Neue", Helvetica, Arial, sans-serif;background-color: rgb(255,255,255);margin-bottom: 2.72rem; }
+.row{width:100%}
+.col2{width: 16.6%;margin-right: 2%}
+.col3{width: 25%;margin-right: 2%}
+.col4{width: 33%;margin-right: 2%}
+.col6{width: 50%;margin-right: 2%}
+.col9{width: 75%;margin-right: 2%}
+.plt{padding-top:0.83rem;}
+ .text-center{text-align: center;}
+ .text-right{text-align: right;}
+.plr{padding-left: 0.83rem;padding-right: 0.83rem;}
+.mr10{margin-right:0.55rem; }
+.fr{float: right;}
+.fl{float: left;}
+
+	
+	header{height:5rem;background-color: rgb(230,230,230); position: relative;}
+	header h2{color: rgb(217,50,41);height: 5rem;line-height: 5rem;}
+	header h2:after{content: "";height: 12px;width:0;border: 1px solid #000;display: inline-block;transform:rotate(45deg); position: absolute;right: 5%;top: 5%;}
+	header h2:before{content: "";height: 12px;width:0;border: 1px solid #000;display: inline-block;transform:rotate(-45deg); position: absolute;right: 5%;top: 5%;}
+	header img{height: 3rem;width: auto;display: inline-block;}
+
+	header img{height: 3rem;width: auto;display: inline-block;}
+	.content{margin-top: 1rem;border-bottom: 1px solid rgb(241,241,241);padding-bottom:10px;}
+	.content a{border:1px solid #222;height: 1.72rem;display: inline-block;line-height: 1.72rem;text-align: center;margin-right: 3%;margin-top: 3%;padding-left: 3%;padding-right: 3%;} 
+	.content label input{display: none;}
+	.content label input[type="radio"]:checked+a{color: red;border:1px solid red; }
+	.content label a:hover{color: #666666;}
+	.addre p{margin-top: 0.83rem;margin-bottom: 0.83rem}
+	.addre p span{display: inline-block; text-align: right;}
+	.addre{padding-top: 0.83rem;border-bottom: 1px solid rgb(241,241,241);}
+	.btn{height: 5rem;width: 100%;text-align: center;line-height: 5rem;}
+	.btn-info{background-color:rgb(241,241,241); height: 2.38rem;width:40%;color: #23DECD;display: inline-block;text-align: center;line-height: 2.38rem; border-radius: 5px;margin-right: 5%;}
+	.btn-info:hover{background-color: #23DECD;color: #fff}
+	.btn-sucess{background-color:#23DECD; height: 2.38rem;width:40%;color: rgb(241,241,241);display: inline-block;text-align: center;line-height: 2.38rem; border-radius: 5px;margin-right: 5%;}
+	.btn-sucess:hover{color: #fff}
+
+
+/*footer st*/
+	footer{height:2.72rem;width: 100%;position: fixed;left: 0;bottom: 0;z-index: 100}
+	
+	.footul{position: fixed;left: 0;bottom:0;width: 100%}
+	.footul li{width: 33.3%;text-align: center;}
+	.footul li a{display:block;font-size: 0.83rem;color: #333;background-image: url(images/icon.png);background-repeat: no-repeat;background-position: 5% center;-webkit-background-size: 1rem 1rem;background-size: 1rem 1rem;}
+
+	.footul{border:1px solid #c0c0c0;height: 2.38rem;line-height:2.38rem;background-color: #fff; }
+	.footul .footli2{border-left: 1px solid #c0c0c0;border-right:1px solid #c0c0c0 ;}
+	.fleft{float: left;}
+	.fright{float: right;}
+	 
+/*foot ed*/
+
+/*例子代码*/
+
+	#inner{ width:4900px;}
+	/*
+	包住所有的图片  宽度为980*5=4900  让图片横向平铺
+	*/
+	#slide{ width:980px; overflow:hidden;}
+	/*
+	包住inner 让图片只显现1张的宽度  980，，其他隐藏；
+	*/
+	#out{ position:relative; width:980px;}
+	
+	/*让小图片有一个定位的参照也就是 out */
+	#left{ position:absolute; top:150px; left:100px; cursor:pointer;}
+	/* 绝对定位图片 左右 参照 out*/
+	#right{ position:absolute; top:150px; right:100px;cursor:pointer;}
+
+
+</style>
+<link rel="stylesheet" href="css/sm.css" media="screen and (min-width:568px)">
+<link rel="stylesheet" href="css/big.css" media="screen and (min-width:720px)">
+
+</head>
+<body>
+ <header class="plr">
+ 	<h2><a href=""><img src="images/img/reserve.jpg" alt=""></a>￥588.00</h2>
+ </header>
+	<div class="content plr">
+		<p>型号尺码</p>
+		<label>
+			<input type="radio" name="col" checked="checked"><a class=" active">均码-黑色</a>
+		</label>
+		<label>
+			<input type="radio" name="col"><a >均码-粉红色</a>
+		</label>
+		<label>
+			<input type="radio" name="col"><a >均码-蓝色</a>
+		
+		</label>
+		<label>
+			<input type="radio" name="col"><a >均码-绿色</a>
+		</label>
+	</div>
+	<div class="addre plr ">
+	<p class="row"><span class="col2 text-right">预约时间</span> <input type="date" class="col4">
+	 <select name="" id="" class="col4">
+	 	<option value="">上午9:00-12:00</option>
+	 	<option value="">下午13:00-15:00</option>
+	 	<option value="">下午15:00-17:00</option>
+	 </select></p>
+
+	 	<p class="row"><span class="col2 text-right ">选择门店</span> 
+	 	<select name="" id="" class="col4">
+	 	<option value="">浙江杭州店</option>
+	 	<option value="">上海黄埔店</option>
+	 	<option value="">北京海淀店</option>
+	 </select></p>	
+	<p class="row"><span class="col2 text-right">备注</span> <input type="text" class="col9"></p>
+	</div>
+	
+<div class="addre plr ">
+	<p class="row"><span class="col2 text-right">称呼</span> <input type="text" class="col4">
+	 <select name="" id="" class="col4" value="性别">
+	 	<option value="">男士</option>
+	 	<option value="">女士</option>
+	 </select></p>
+	 	<p class="row"><span class="col2 text-right ">联系电话</span> 
+	 	<input type="text" class="col6"></p>	
+	<p class="row"><span class="col2 text-right">联系地址</span> <input type="text" class="col9"></p>
+	</div>
+	<div class="btn">
+		<a href="shb-index.html" class="btn-info">继续购物</a><a href="" class="btn-sucess">确认预约</a>
+	</div>
+	<ul class="footul clearfix">
+			<li class="fleft active">
+				<a href="shb-index.html">微商城</a>
+			</li>
+			<li class="footli2 fleft">
+				<a href="shb-kefuguanli.html">客服管理</a>
+			</li>
+			<li class="fleft">
+				<a href="shbgeren.html">个人中心</a>
+			</li>
+	</ul>
+				
+</body>
+</html>

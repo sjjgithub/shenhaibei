@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>深海贝</title>
+	
+	<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<!-- 视口大小  原始比例1.0  最大缩放1.0 最小缩放1.0  不让用户缩放 -->
+<meta name="apple-mobile-web-app-capable" content="yes">
+<!-- 在苹果手机里面 看上去像app应用 -->
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<!-- 苹果手机的状态栏是 黑色 -->
+<link rel="stylesheet" href="css/reset.css">
+<script src="js/TouchSlide.1.1.js"></script>
+<style>	
+html{font-size: 18px;}
+body{font-size: 12px;font-family:roboto, \65B9\6B63\5170\4EAD\7EA4\9ED1\7B80\4F53, \5FAE\8F6F\96C5\9ED1, "Helvetica Neue", Helvetica, Arial, sans-serif;}
+/* 本例子css -------------------------------------- */
+	.banner{padding-bottom: 30px}
+	.slideBox{ position:relative; overflow:hidden; margin:0px auto;  max-width:100%;/* 设置焦点图最大宽度 */ }
+	.slideBox .hd{ position:absolute; height:28px; line-height:28px; bottom:5px; left:48%; right: 0; z-index:1; }
+	.slideBox .hd li{ display:inline-block; width:5px; height:5px; -webkit-border-radius:5px; -moz-border-radius:5px; border-radius:5px; background:#333; text-indent:-9999px; overflow:hidden; margin:0 6px;   }
+	.slideBox .hd li.on{ background:#fff;  }
+	.slideBox .bd{ position:relative; z-index:0; }
+	.slideBox .bd li{ position:relative; text-align:center;  }
+	.slideBox .bd li img{ background:url(images/loading.gif) center center no-repeat;  vertical-align:top; width:100%;/* 图片宽度100%，达到自适应效果 */}
+	.slideBox .bd li a{ -webkit-tap-highlight-color:rgba(0,0,0,0);  }  /* 去掉链接触摸高亮 */
+	.slideBox .bd li .tit{ display:block; width:100%;  position:absolute; bottom:0; text-indent:10px; height:28px; line-height:28px; background:url(images/focusBg.png) repeat-x; color:#fff;  text-align:left;  }
+
+.black{color: #222;}
+.orige{background-color: rgb(234,145,39);color:#fff;padding:2px;margin-left: 0.83rem;padding-left: 8px;padding-right: 8px;}
+.blue{background-color: rgb(19,123,139);color:#fff;padding:2px;margin-left: 0.83rem;padding-left: 8px;padding-right: 8px;}
+.danger{background-color: rgb(227,89,40);color:#fff;padding:2px;margin-left: 0.83rem;padding-left: 8px;padding-right: 8px;}
+.blue1{background-color: rgb(36,167,172);color:#fff;padding:2px;margin-left: 0.83rem;padding-left: 8px;padding-right: 8px;}
+.list{height: 2.38rem; }
+
+
+nav>a>img{width: 100%;height: auto;}
+header{position: relative;}
+header>a>img{height: 130px;width: auto;display: inline-block;
+}
+header>a{position: absolute;left: 10px;top:-60px;border:2px solid #fff;box-shadow: 2px 2px 3px #999;}
+header .info{padding-left: 160px;padding-top:20px; }
+header .point{font-weight: normal;}
+header .point:before{content: "";height: 0;width: 0;border:2px solid #0FFF00;display: inline-block;border-radius: 2px;margin-left: 20px;margin-bottom: 3px;}
+header .love  {margin-top: 10px;margin-bottom: 10px;}
+header .love a{display: inline-block;margin-top: 5px;}
+.main{margin-top: 20px;}
+.main li{/*height:2.38rem;*/line-height: 2.38rem;width: 100%;border-top: 1px solid rgb(230,230,230);  }
+.main li p{margin-left: 0.83rem;margin-right: 0.38rem;}
+.main li span{margin-left: 20px; height: }
+.main li img{height: 1rem;width: 1rem;margin-left: 4px}
+.banner{margin-top: 20px;}
+.banner .text-center{text-align: center;margin-bottom: 10px;}
+.text-center:before, .text-center:after{content: "";height: 0px;width: 50px;display: inline-block;border:0.5px solid rgb(45,156,158);margin-bottom: 5px;margin-left: 5px;margin-right: 5px;}
+.foot{height: 1.72rem;width: 100%;float: left;background-color: rgb(205,205,205);position: fixed;bottom: 0;left: 0;}
+.foot li{float: left;width: 50%;border-right: 1px solid #aaa;}
+.foot li img{height: 1.2rem;width: auto;display: inline-block;margin-right: 5px;}
+.foot li a{height: 1.72rem;width: 100%;line-height: 1.72rem;text-align: center;display: inline-block;}
+.foot li a:hover{color: #777;background-color:rgb(225,225,225); }
+
+
+</style>
+<link rel="stylesheet" href="css/sm.css" media="screen and (min-width:568px)">
+<link rel="stylesheet" href="css/big.css" media="screen and (min-width:720px)">
+</head>
+<body> 
+
+<nav><a href=""><img src="images/img/bg.jpg" alt=""></a></nav>
+<header class="black"><a href=""><img src="images/img/goods1.jpg" alt=""></a>
+<div class="info"><h3>安妮 <span class="point"> 在线</span></h3>
+<p>女 28岁 上海市静安区</p>
+<p>距您10公里全程服务30次</p>
+</div>
+<div class="love">
+
+<a href="" class="orige">金牛座</a>
+<a href="" class="blue">热爱手工艺品</a>
+<a href="" class="blue1">爱吃辣</a>
+<a href="" class="danger">喜欢雪</a>
+<a href="" class="orige">向往韩剧爱情</a>
+<a href="" class="blue">永不磨灭的好气心</a>
+<a href="" class="blue1">自信</a>
+</div></header>
+<div class="main">
+	<div class="title">
+	<ul>
+		<li><p class=""> 平均评价 <span><img src="images/star.png" alt=""><img src="images/star.png" alt=""><img src="images/star.png" alt=""><img src="images/star.png" alt=""></span></p> </li>
+	<li><p class=""> 自我描述 <span>关心身边点滴，擅长多种风格穿着搭配</span></p> </li>
+	<li><p class=""> 体系描述 <span>关心身边点滴，擅长多种风格穿着搭配。</span></p> </li>
+	</ul>
+	</div>
+	</div>
+	<!-- banner st -->
+	<div class="banner">
+			<p class="text-center">最满意的搭配</p>
+
+				<div id="slideBox" class="slideBox">
+
+				<div class="bd">
+					<ul>
+							<li>
+								<a class="pic" href="#"><img src="images/img/servicedetail.jpg" height="auto;" width="1920" /></a>
+							
+							</li>
+							<li>
+								<a class="pic" href="#"><img src="images/img/servicedetail.jpg" height="auto" width="1920"/></a> 
+							
+							</li>
+						
+					</ul>
+				</div>
+
+				<div class="hd">
+					<ul></ul>
+				</div>
+			</div>
+			<script type="text/javascript">
+				TouchSlide({ 
+					slideCell:"#slideBox",
+					titCell:".hd ul", //开启自动分页 autoPage:true ，此时设置 titCell 为导航元素包裹层
+					mainCell:".bd ul", 
+					effect:"leftLoop", 
+					autoPage:true,//自动分页
+					autoPlay:true //自动播放
+				});
+			</script>
+			<!-- 本例主要代码 End ================================ -->
+	</div>
+
+<footer >	
+	<ul class="foot">
+		<li><a href="" class><img src="images/contact.png" alt="">聊天</a></li>
+		<li><a href=""><img src="images/lock.png" alt="">绑定</a></li>
+	</ul>
+</footer>
+			
+</body>
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="format-detection" content="telephone=no">
+<title>深海贝类-添加收货地址</title>
+<link rel="stylesheet" type="text/css" href="../css/basic.css" />
+<link rel="stylesheet" type="text/css" href="../css/theme.css" />
+<link rel="stylesheet" type="text/css" href="../css/common.css" />
+</head>
+<body>
+<div class="wrapper">
+	<div class="userAdddress bc">
+		<h1 class="f6 pl20 pt12 pb15">添加新地址</h1>
+		<ul class="userInfo pb15">
+			<li>
+				<label class="in_b f4">收货人</label>
+				<input type="text" class="txt fm" placeholder="请输入收货人姓名"/>
+			</li>
+			<li>
+				<label class="in_b f4">手机号码</label>
+				<input type="text" class="txt fm" placeholder="请输入收货人手机号码"/>
+			</li>
+		</ul>
+		<h2 class="tc pt15 pb15 f3">*如果由其他人收货，请填写收货人的手机号码</h2>
+		<ul class="userInfo pb15">
+			<li class="clearfix f4">
+				<label class="in_b">所在地区</label>
+				<div class="selected_box fr address_box">
+					<div class="mb8">
+						<input type="text" readonly class="pl5 tc" value="-选择省-" id="myselect">
+						<ul class="select_ul pa none tc">
+							<li>上海</li>
+							<li>北京</li>
+						</ul>
+					</div>
+					<div class="mb8">
+						<input type="text" readonly class="pl5 tc" value="-选择市-" id="myselect">
+						<ul class="select_ul pa none tc">
+							<li>上海市</li>
+							<li>北京市</li>
+						</ul>
+					</div>
+					<div class="mb8">
+						<input type="text" readonly class="pl5 tc" value="-选择区-" id="myselect">
+						<ul class="select_ul pa none tc">
+							<li>浦东新区</li>
+							<li>黄埔区</li>
+						</ul>
+					</div>
+				</div>
+				
+			</li>
+			<li>
+				<label class="in_b f4">详细地址</label>
+				<input type="text" class="txt fm" placeholder="请输入街道详细地址" />
+			</li>
+		</ul>
+		<input type="button" class="addressBtn fm bc mt12 block" value="确认收货地址"/>
+	</div>
+</div>
+<footer>
+	<div class="inner_footer clearfix f7">
+		<a href="#" class="fl tc in_b">微商城</a>
+		<a href="#" class="fl tc in_b">客服管理</a>
+		<a href="#" class="fl tc in_b">个人中心</a>
+	</div>
+</footer>
+<script src="../js/jquery-1.8.2.min.js"></script>
+<script src="../js/public.js"></script>
+<script type="text/javascript">
+$(function(){
+	$(".reserve_time").last().addClass("resreveLast");
+	$("body").css("backgroundColor","#e3e2e2");
+	$(".userAdddress").width( 600/640*100+"%" );
+})
+</script>
+</body>
+</html>

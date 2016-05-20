@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="UTF-8">
+	<title>shb-address</title>
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/bootstrap.css">
+	<style>
+		html{font-size: 18px;}
+		body{font-size:12px;font-family:roboto, \65B9\6B63\5170\4EAD\7EA4\9ED1\7B80\4F53, \5FAE\8F6F\96C5\9ED1, "Helvetica Neue", Helvetica, Arial, sans-serif;background-color:#fff;}
+		input{border:none;border-bottom: 1px solid #ddd;outline-style: none;display: block;width:100%;padding-left: 10px;margin-top: 10px;height:30px;line-height: 30px;}
+		input:hover{outline-style: none;}
+		input:visited{outline-style: none;}
+		input:active{outline-style: none;}
+		.select-head{padding:10px 5%;}
+		.select-te{width:100%;height:88px;background-color:#f0f0f0;font-size: 14px;padding:15px 10px;line-height:25px;}
+		.select-te:hover{background-color: #bbb;}
+		.text-se{position:relative;color:#333;display: block;}
+		.text-se:hover{text-decoration: none;color:#000;background:url(images/selected.png) no-repeat right center;background-color: #bbb;}
+		.text-se:active{background:url(images/selected.png) no-repeat right center;}
+		.select-te2{margin-top: 10px;}
+
+		.add-address{font-size:16px;padding-top:10px;padding-bottom:5px;color:#333;padding-left: 3%;}
+		.addre{background-color: #fff;margin:0px 3%;padding:10px 5% 20px 5%;}
+		.btn-pink{background-color:#c60a1e;color:#fff;}	
+		.btn-pink:visited{background-color:#f40922;color:#fff;}
+		.btn-pink:hover{background-color:#cc1a2d;color:#fff;}
+		.btn-pink:active{background-color: #e74354;color:#fff;}
+		.col-xs-3,.col-xs-9{padding:0;}
+		.pone-address{margin-top:15px;}
+		.pone-address1{padding-top:5px;}
+		.consignee{padding-top:15px;}
+		.other{padding-top:10px;padding-bottom: 10px;text-align:center;font-size: 14px;color:#777;}
+		select{display: block;margin-top:10px;width:100%;border: none;margin-left:5%;padding-left:40%;-webkit-appearance:none;height:30px;line-height: 30px;background:url(images/addressbg.png) no-repeat right center;-webkit-background-size: 30px 30px;}
+			select:hover{outline-style: none;border: none;}
+		select:visited{outline-style: none;border: none;}
+		select:active{outline-style: none;border: none;}
+
+		.selec{background-color:#eee;}
+		.in-detail{padding-top:25px;}
+		.in-detail1{padding-top:35px;}
+		.address-so{padding-top:10px;}
+
+		.btnaa{height:45px;width:auto;margin-left:45%;margin-top:30px;}
+		.btnaa:hover{background-color:#F60F0F;}
+
+
+
+	</style>
+</head>
+<body>
+<form action="shbfukuan.html">
+	<div class="select-head">
+		<div class="select-te">
+		<a href="" class="text-se">
+			<p>姓名15100002211<br>上海市静安区西康路618号华通大厦		
+			</p>
+		</a>
+		</div>
+		<div class="select-te select-te2">
+		<a href="" class="text-se">
+			<p>姓名15100002211<br>上海市静安区西康路618号华通大厦		
+			</p>
+		</a>
+		</div>
+		<div class="row">
+		<div class="col-xs-5 col-xs-offset-3">
+			<input type="submit" value="确认收货地址" class="btn btn-pink btnaa">
+		</div>
+		</div>
+	</div>
+
+
+
+	<div class="header">
+		<h3 class="add-address">添加新地址</h3>
+		<div class="addre row">
+			<span class="col-xs-3 consignee">收货人</span>
+			<div class="col-xs-9">
+			 	<input type="text" placeholder="请输入收货人">
+			</div>
+			<span class="col-xs-3 pone-address pone-address1"  class="pone-address">手机号码</span>
+			<div class="col-xs-9">
+				<input type="text" placeholder="请输入收货人手机号码" class="pone-address">
+			</div>
+		</div>
+		<h4 class="other">*如果由其他人收货，请填写收货人的手机号码</h4>
+		<div class="addre row">
+			<span class="col-xs-3 address-so">所在地</span>
+			<div class="col-xs-9">
+			 	<select class="selec">
+			 		<option value="">选择省</option>
+			 		<option value="">北京</option>
+			 		<option value="">上海</option>
+			 	</select>
+			 	<select class="selec">
+			 		<option value="">选择市</option>
+			 		<option value="">北京市</option>
+			 		<option value="">上海市</option>
+			 	</select>
+			 	<select class="selec">
+			 		<option value="">选择区</option>
+			 		<option value="">浦东区</option>
+			 		<option value="">黄埔区</option>
+			 	</select>
+			</div>
+			<span class="col-xs-3 in-detail1">详细地址</span>
+			<div class="col-xs-9 in-detail">
+				<input type="text" placeholder="请输入详细地址">
+			</div>			
+		</div>
+		<div class="col-xs-5 col-xs-offset-3">
+			<input type="submit" value="确认收货地址" class="btn btn-pink btnaa">
+		</div>
+	</div>
+	</form>
+	<!--[if lt IE 9]>
+		<script src="//cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+     	 <script src="//cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+	<![endif]-->
+	<script src="js/jquery.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+</body>
+</html>

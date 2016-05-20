@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>深海贝</title>
+	
+	<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<!-- 视口大小  原始比例1.0  最大缩放1.0 最小缩放1.0  不让用户缩放 -->
+<meta name="apple-mobile-web-app-capable" content="yes">
+<!-- 在苹果手机里面 看上去像app应用 -->
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<!-- 苹果手机的状态栏是 黑色 -->
+<link rel="stylesheet" href="css/reset.css">
+<script src="js/TouchSlide.1.1.js"></script>
+<style>	
+html{font-size: 18px;}
+body{font-size: 12px;font-family:roboto, \65B9\6B63\5170\4EAD\7EA4\9ED1\7B80\4F53, \5FAE\8F6F\96C5\9ED1, "Helvetica Neue", Helvetica, Arial, sans-serif;background-color: rgb(226,226,226); }
+.text-center{text-align: center;}
+
+	/* 本例子css -------------------------------------- */
+	.slideBox{ position:relative; overflow:hidden; margin:0px auto;  max-width:100%;/* 设置焦点图最大宽度 */ }
+	.slideBox .hd{ position:absolute; height:28px; line-height:28px; bottom:5px; left:48%; right: 0; z-index:1; }
+	.slideBox .hd li{ display:inline-block; width:5px; height:5px; -webkit-border-radius:5px; -moz-border-radius:5px; border-radius:5px; background:#333; text-indent:-9999px; overflow:hidden; margin:0 6px;   }
+	.slideBox .hd li.on{ background:#fff;  }
+	.slideBox .bd{ position:relative; z-index:0; }
+	.slideBox .bd li{ position:relative; text-align:center;  }
+	.slideBox .bd li img{ background:url(images/loading.gif) center center no-repeat;  vertical-align:top; width:100%;/* 图片宽度100%，达到自适应效果 */}
+	.slideBox .bd li a{ -webkit-tap-highlight-color:rgba(0,0,0,0);  }  /* 去掉链接触摸高亮 */
+	.slideBox .bd li .tit{ display:block; width:100%;  position:absolute; bottom:0; text-indent:10px; height:28px; line-height:28px; background:url(images/focusBg.png) repeat-x; color:#fff;  text-align:left;  }
+
+	.header{height: 2.72rem;background-color: #fff;line-height: 1rem;position: relative; padding-top: 0.64rem;}
+	.header h1{font-weight: normal;font-size: 0.8rem;color: #222;line-height: 0.8rem;}
+	.header h1 span{display: inline-block;font-size: 0.61rem;color: #777;height: 1.2rem;}
+	.header h1 span:before{content:"";height:0.83rem;width: 0.83rem; display: inline-block;background: url(images/weixin.png) no-repeat center center;-webkit-background-size: 100% auto;
+		background-size: 100% auto;margin-right: 0.2rem;}
+	.portrait{position: absolute;left:0.8rem;top: -1.5rem;height: 2.5rem;width: 2.5rem; overflow: hidden;padding: 0.2rem;border-radius: 3rem;box-shadow: 0 2px 3px #aaa;background-color: #fff;}
+	.portrait img{width: 100%;height: auto; }
+	.ftitle{height: 1.61rem;line-height: 1.61rem;margin: 0.83rem;border-left:3px solid red;padding-left: 0.6rem}
+	.goodlist{margin-left: 0.83rem;margin-right: 0.83rem;}
+	.glist{float: left;width: 48%;background-color: #fff;margin-bottom: 4%;transition:all 1s ease;}
+	.goodlist .glist:nth-child(2n){margin-left: 4%;}
+	.glist:hover {box-shadow: 0 2px 3px #999; opacity: .7;}
+	
+	.glist a{margin: 0.42rem;display: block;}
+	.glist img{width: 100%;height: auto;}
+	.glist h4{font-size:0.63rem;line-height: .8rem;height: 2.2rem; }
+	.glist h4:hover{color: #26C9CE;}
+	.price{color: #F42929;font-size: 0.83rem;}
+
+	
+
+
+	.choose{height:1.61rem;width: 94%;background-color: #fff;line-height: 1.61rem; margin-left:3%;margin-right: 3%;margin-top: 4%  }
+	.choose p{ font-size: 0.83rem;margin-left: 0.82rem;color: #333;position: relative;}
+	.choose p span{margin-left: 0.4rem;}
+	.choose p:after{content: "";height: 10px;width: 10px;border-right: 2px solid #777;
+	display: block; border-bottom: 2px solid #777;transform:rotate(-45deg);position: absolute;left: 90%;top: 30%;}
+	.para{height:1.72rem;width: 100%;background-color: #fff;line-height: 1.72rem; margin-top: 4%;float: right; }
+	}
+	.para>li{height: 1.72rem;display: block;width: 50%;height: 100%;}
+	.para>li>a{font-size: 0.82rem;float: left;text-align: center;/*border:1px solid red;*/display: block;width: 50%;}
+	.para>li>a:hover, .para .active{border-bottom: 0.15rem solid rgb(45,156,158);color:rgb(45,156,158);}
+
+	.link{width: 100%;margin-top: 4%;float: left; background-color: #fff;}
+	.link1 {font-size:0.82rem;height: 2.44rem;width: 100%;padding-left:0.83rem;line-height: 2.44rem;display: block;border-bottom: 1px solid rgb(218,218,218);}
+	.link .tit {margin-left:30%;display: inline-block;}
+
+	footer{height:2.72rem;width: 100%;position: fixed;left: 0;bottom: 0;z-index: 100;}
+	.foot{background:rgb(255,255,255); float: right;width: 100%;height: 100%}
+	.foot li{float: left;width: 30%;height: 2.72rem;line-height: 2.72rem;margin-left: 3%;}
+	.foot li input{display: block;color:#777;text-align: center;height: 2rem;line-height: 2rem;font-size: 0.78rem; width:100%;margin-right: 4%;margin-top: 0.4rem;border:none;border-radius: 5px;color: #fff;}
+	.foot li input:hover, .foot li .active{background-color:rgb(14,193,173);color: #fff; }
+	.foot li:nth-child(1) input{color:rgb(14,193,173);}
+	.foot li:nth-child(1) input:hover{background-color:rgb(14,193,173);color: #fff; }
+
+	.aside{height:1.7rem;width: 5rem;background-color: rgb(14,193,173);color: #fff;position: fixed;right: 5%;top: 70%; border-radius: 8px; }
+	.aside a{height:1.7rem;line-height: 1.7rem;display: block;text-align: center;font-size:0.7rem; color: #fff; }
+	.aside img{height: 18px;width:18px;}
+
+
+	
+	 
+
+
+
+</style>
+<link rel="stylesheet" href="css/sm.css" media="screen and (min-width:568px)">
+<link rel="stylesheet" href="css/big.css" media="screen and (min-width:720px)">
+
+</head>
+<body> 
+	<!-- 本例主要代码 Start ================================ -->
+			<div id="slideBox" class="slideBox">
+
+				<div class="bd">
+					<ul>
+							<li>
+								<a class="pic" href="#"><img src="images/goods1.jpg" height="auto;" width="1920" /></a>
+							
+							</li>
+							<li>
+								<a class="pic" href="#"><img src="images/goods2.jpg" height="auto" width="1920"/></a> 
+							
+							</li>
+						
+					</ul>
+				</div>
+
+				<div class="hd">
+					<ul></ul>
+				</div>
+			</div>
+			<script type="text/javascript">
+				TouchSlide({ 
+					slideCell:"#slideBox",
+					titCell:".hd ul", //开启自动分页 autoPage:true ，此时设置 titCell 为导航元素包裹层
+					mainCell:".bd ul", 
+					effect:"leftLoop", 
+					autoPage:true,//自动分页
+					autoPlay:true //自动播放
+				});
+			</script>
+			<!-- 本例主要代码 End ================================ -->
+					<div class="choose">
+						<p>选择商品 <span>型号尺寸</p>
+					</div>
+						
+					<ul class="para">
+						<li><a href="">图文详情</a></li>
+						<li ><a href="" class="active">商品参数</a></li>
+					</div>
+					<div class="link">
+				
+					<p class="link1">品牌<span class="tit">深海贝</span></p>
+					<p class="link1">货号<span class="tit">货号</span></p>
+					<p class="link1">颜色<span class="tit">深海贝</span></p>
+					<p class="link1">面料<span class="tit">深海贝</span></p>
+						<p class="link1">厚度<span class="tit">深海贝</span></p>
+					<p class="link1">弹力<span class="tit">深海贝</span></p>
+					<p class="link1">长度<span class="tit">深海贝</span></p>
+						<p class="link1">品牌<span class="tit">深海贝</span></p>
+					<p class="link1">品牌<span class="tit">深海贝</span></p>
+					<p class="link1">品牌<span class="tit">深海贝</span></p>
+				
+					</div>
+		
+
+		<footer>
+			
+				<ul class="foot">
+					<li><input type="submit" value="加入购物车"></li>
+					<li><input type="submit" value="立即购买" class="active"></li>
+					<li><input type="submit" value="预约服务"></li>
+				</ul>
+			
+		</footer>
+				<div class="aside"><a href=""><img src="images/service.png" alt="">联系客服</a></div>
+</body>
+</html>

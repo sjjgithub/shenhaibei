@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="format-detection" content="telephone=no">
+<title>深海贝类-物流信息</title>
+<link rel="stylesheet" type="text/css" href="../css/basic.css" />
+<link rel="stylesheet" type="text/css" href="../css/theme.css" />
+<link rel="stylesheet" type="text/css" href="../css/common.css" />
+</head>
+<body>
+<div class="logistics_top clearfix">
+	<div class="fl logistics_img">
+		<img src="../images/img/logistics.jpg" class="response_img" alt="物流" />
+	</div>
+	<div class="fl logistics_name mt12">
+		<h1 class="f7 mb2">中通快递</h1>
+		<h2 class="f3">运单编号：762646627885</h2>
+		<h2 class="f3">物流状态：签收成功</h2>
+	</div>
+</div>
+<section class="logistics_goods pt12">
+	<div class="logistics_goodsList pb12">
+		<div class="w925 bc">
+			<h1 class="f6">商品信息</h1>
+			<div class="clearfix mt12 f3 logisticsInfo">
+				<a href="http://www.baidu.com" class="fl block logisticsImg"><img src="../images/img/goods.jpg" class="response_img" alt="图片" /></a>
+				<a href="http://www.baidu.com" class="logisticsGoodsName fl block pt2">包邮至尊高速Sandisk/闪迪包邮至尊高速Sandisk/闪迪</a>
+				<div class="fr tr logisticsPrice">
+					<h3>￥389.00</h3>
+					<h4 class="pt5">×1</h4>
+				</div>
+			</div>
+			<div class="clearfix mt12 f3 logisticsInfo">
+				<a href="#" class="fl block logisticsImg"><img src="../images/img/goods.jpg" class="response_img" alt="图片" /></a>
+				<a href="#" class="logisticsGoodsName fl block pt2">包邮至尊高速Sandisk/闪迪包邮至尊高速Sandisk/闪迪</a>
+				<div class="fr tr logisticsPrice">
+					<h3>￥389.00</h3>
+					<h4 class="pt5">×1</h4>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+<section class="logistics_goods pt12">
+	<div class="logistics_List">
+		<div class="w925 bc">
+			<h1 class="f6 mb10">物流跟踪</h1>
+			<div class="state_prev clearfix">
+				<div class="fr stateInfo">
+					<h5 class="f4 pt2">快件已签收   签收人拍照签收</h5>
+					<h5 class="f3 pt8">2014-12-20 12:22:20</h5>
+				</div>
+			</div>
+			<div class="state_next clearfix">
+				<div class="fr stateInfo">
+					<h5 class="f4 pt10">快件已签收   签收人拍照签收</h5>
+					<h5 class="f3 pt8">2014-12-20 12:22:20</h5>
+				</div>
+			</div>
+			<div class="state_next clearfix">
+				<div class="fr stateInfo">
+					<h5 class="f4 pt10">快件已签收   签收人拍照签收</h5>
+					<h5 class="f3 pt8">2014-12-20 12:22:20</h5>
+				</div>
+			</div>
+			<div class="state_next clearfix">
+				<div class="fr stateInfo">
+					<h5 class="f4 pt10">快件已签收   签收人拍照签收</h5>
+					<h5 class="f3 pt8">2014-12-20 12:22:20</h5>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+<script src="../js/jquery-1.8.2.min.js"></script>
+<script src="../js/public.js"></script>
+<script>
+$(function(){
+	$(".state_next").last().addClass("stateLast");
+	//div模拟超链接
+	$(".logisticsInfo").click(function(){
+		window.location = $(this).find("a").attr("href");
+	});
+})
+</script>
+</body>
+</html>

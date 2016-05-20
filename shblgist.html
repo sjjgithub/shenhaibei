@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<!-- 视口大小  原始比例1.0  最大缩放1.0 最小缩放1.0  不让用户缩放 -->
+	<meta name="apple-mobile-web-app-capable" content="yes">
+<!-- 在苹果手机里面 看上去像app应用 -->
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<!-- 苹果手机的状态栏是 黑色 -->
+	<title>深海贝2</title>
+	<link rel="stylesheet" href="css/reset.css">
+	<script src="js/TouchSlide.1.1.js"></script>
+	<style>
+	<style>
+/*通用*/
+	html{font-size: 18px;}
+	body{font-size: 12px; 
+		font-family: roboto, \65B9\6B63\5170\4EAD\7EA4\9ED1\7B80\4F53, \5FAE\8F6F\96C5\9ED1, "Helvetica Neue", Helvetica,Arial, sans-serif;background-color: rgb(230,230,230);font-weight: normal;}
+	.col-12{width:100%;padding:10px;}
+	.col-7{width:58.1%;float: left;padding: 10px}
+	.col-4{width: 33.3%;float: left;}
+	.col-3{width: 25%;float: left;}
+	.col-2{width: 16.6%;float: left;}
+	h1,h2,h3,h4,h5{font-weight: normal;}
+	.text-center{text-align: center;background-color: #ddd;}
+	.fleft{float: left;}
+	.top{background-color: #5e6b85;/*padding-left: 15px;*/height: 80px;color: #fff;}
+	.top img{ margin:20px 15px;margin-right: 10px;}
+	.topr{padding-top: 15px;}
+	.banner{background-color: #fff;margin-top:15px;border:1px solid #dbdbdb;padding-left: 3%;padding-right: 3%;  }
+	.banner h2{height: 50px;line-height: 50px;border-bottom: 1px solid #dbdbdb; }
+	.banner a{color: #000;font-size: 0.85rem}
+	.banimg{display: inline-block;border:1px solid #dbdbdb; padding:5px; }
+	
+	.banr{text-align: right;padding:10px;}
+	.banner ul{padding-top: 10px;padding-bottom: 10px}
+	.banner ul li{margin-bottom: 10px}
+	.goodad{background-color: #fff;margin-top:15px;border:1px solid #dbdbdb;padding-left: 3%;padding-right: 3%;}
+	.goodad h2{height: 50px;line-height: 50px;border-bottom: 1px solid #dbdbdb; }
+	{overflow: hidden;}
+	.goodad ul li{width: 78%;height: 52px;border-bottom: 1px solid #dbdbdb;float: right;line-height: 20px;padding-top: 10px;position: relative;}
+	.goodad ul li:before{content: "";width: 31px;height: 52px; background-image: url(images/statenext.png);display:inline-block;position: absolute;left:-28%; top: 10px;-webkit-background-size:15px auto;background-repeat: no-repeat;background-size:15px auto;}
+	.goodad ul .active:before{background-image: url(images/state.png);}
+	.goodad ul .active{color: #25ae5f; }
+	@media screen and (max-width:768px){
+		.banimg img{width: 100%;height: auto; }
+	}
+	</style>
+</head>
+<body>
+	<div class="top">
+		<img src="images/img/logistics.jpg" height="40" width="40" alt="" class="fleft">
+		<div class="topr">
+			<h2>中通快递</h1>
+			<p>运单编号：762646627885</p>
+			<p>物流状态：签收成功</p>
+		</div>
+	</div>
+	<section class="banner">
+		<h2>商品信息</h2>
+		<ul class="clearfix ">
+			<li class="clearfix">
+				<a href="" class="banimg col-2"><img src="images/img/goods.jpg" height="104" width="104" alt="" ></a>
+				<a href="" class="col-7">包邮至尊高速Sandisk</a> 
+				<div class="col-3 banr">
+					<h3>￥389.00</h3>
+					<h4>×1</h4>
+				</div>
+			</li class="clearfix">
+			<li>
+				<a href="" class="banimg col-2"><img src="images/img/goods.jpg" height="104" width="104" alt="" ></a>
+				<a href="" class="col-7">包邮至尊高速Sandisk</a> 
+				<div class="col-3 banr">
+					<h3>￥389.00</h3>
+					<h4>×1</h4>
+				</div>
+			</li>
+		</ul>
+	</section>
+	<section class="goodad">
+		<h2>物流跟踪</h2>
+		<ul class="clearfix">
+			<li class="active">
+				<h3>快件已签收   签收人拍照签收</h3>
+				<h3>2014-12-20 12:22:20</h3>
+			</li>
+			<li>
+				<h3>快件已签收   签收人拍照签收</h3>
+				<h3>2014-12-20 12:22:20</h3>
+			</li>
+			<li>
+				<h3>快件已签收   签收人拍照签收</h3>
+				<h3>2014-12-20 12:22:20</h3>
+			</li>
+			<li>
+				<h3>快件已签收   签收人拍照签收</h3>
+				<h3>2014-12-20 12:22:20</h3>
+			</li>
+		</ul>
+	</section>
+</body>
+</html>

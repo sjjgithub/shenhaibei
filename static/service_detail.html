@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="format-detection" content="telephone=no">
+<title>深海贝类-客服详情</title>
+<link rel="stylesheet" type="text/css" href="../css/basic.css" />
+<link rel="stylesheet" type="text/css" href="../css/theme.css" />
+<link rel="stylesheet" type="text/css" href="../css/common.css" />
+</head>
+<body>
+<div class="wrapper">
+	<img src="../images/img/bg.jpg" alt="背景" class="response_img" />
+	<div class="service_detail pr clearfix">
+		<a href="#" class="pa in_b detailLeft ml10 mr10"><img src="../images/img/collectgoods.jpg" alt="头像" /></a>
+		<div class="fr detailRight">
+			<h1><span class="f5 pr15 fb">昵称</span><i class="in_b mr5"><em class="f2"></i>在线</em></h1>
+			<p class="f2">女  28岁  上海市静安区</p>
+			<p class="f2 clearfix"><span class="fl">距您10公里</span><span class="fr">全程服务30次</span></p>
+		</div>
+	</div>
+	<div class="service_depict clearfix mt5 f2">
+		<a href="#" class="fl in_b depict1">金牛座</a>
+		<a href="#" class="fl in_b depict2">热爱手工艺</a>
+		<a href="#" class="fl in_b depict3">爱吃辣</a>
+		<a href="#" class="fl in_b depict4">喜欢雪</a>
+		<a href="#" class="fl in_b depict2">爱吃辣</a>
+		<a href="#" class="fl in_b depict4">永不磨灭的好奇心</a>
+	</div>
+	<div class="serviceBox bc">
+		<ul class="service_main">
+			<li class="clearfix f2">
+				<span class="fl pl8 in_b">平均评价</span>
+				<span class="fr in_b pr5">
+					<img src="../images/star.png" />
+					<img src="../images/star.png" />
+					<img src="../images/star.png" />
+					<img src="../images/star.png" />
+				</span>
+			</li>
+			<li class="clearfix f2">
+				<span class="fl pl8 in_b">自我描述</span>
+				<span class="fr in_b pr5">
+					关心身边点滴，擅长多种风格穿着搭配，擅长色彩搭配，想为大家的生活增添美丽。
+				</span>
+			</li>
+			<li class="clearfix f2">
+				<span class="fl pl8 in_b">体系描述</span>
+				<span class="fr in_b pr5">
+					关心身边点滴，擅长多种风格穿着搭配。
+				</span>
+			</li>
+		</ul>
+		<div class="pr bc collocation mt12 pb8">
+			<span class="pa f3 tc">最满意的搭配</span>
+		</div>
+		<div id="detailService" class="slideBox bc pr oh mt8">
+			<div class="bd pr">
+				<ul>
+					<li><a class="pic" href="#"><img src="../images/img/servicedetail.jpg" alt="图片" /></a></li>
+					<li><a class="pic" href="#"><img src="../images/img/servicedetail.jpg" alt="图片" /></a></li>			
+				</ul>
+			</div>
+			<div class="hd pa clearfix">
+				<span class="prev fl"></span>
+				<span class="next fr"></span>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="serviceContact clearfix f3">
+	<a href="#" class="in_b fl contact tc"><img src="../images/contact.png" class="pr5" />聊天</a>
+	<a href="#" class="in_b fl lock tc"><img src="../images/lock.png" class="pr5" />绑定</a>
+</div>
+<script src="../js/jquery-1.8.2.min.js"></script>
+<script src="../js/TouchSlide.1.1.js"></script>
+<script src="../js/public.js"></script>
+<script type="text/javascript">
+$(function(){
+	TouchSlide({ 
+		slideCell:"#detailService",
+		mainCell:".bd ul", 
+		effect:"leftLoop", 
+		autoPage:false,//自动分页
+		autoPlay:true //自动播放
+	});
+	$(".serviceBox").width(619/640*100+"%");
+	$(".service_main li").last().addClass("last");
+	$(".serviceContact a").width( 638/2/640*100+"%" );
+})
+</script>
+</body>
+</html>

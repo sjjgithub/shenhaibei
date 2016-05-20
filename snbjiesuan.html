@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>深海贝</title>
+	<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<!-- 视口大小  原始比例1.0  最大缩放1.0 最小缩放1.0  不让用户缩放 -->
+	<meta name="apple-mobile-web-app-capable" content="yes">
+<!-- 在苹果手机里面 看上去像app应用 -->
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<!-- 苹果手机的状态栏是 黑色 -->
+	<link rel="stylesheet" href="css/reset.css">
+	<script src="js/TouchSlide.1.1.js"></script>
+	<style>
+/*通用*/
+	html{font-size: 18px;}
+	body{font-size: 12px; font-family: roboto, \65B9\6B63\5170\4EAD\7EA4\9ED1\7B80\4F53, \5FAE\8F6F\96C5\9ED1, "Helvetica Neue", Helvetica,Arial, sans-serif;background-color: rgb(230,230,230);font-weight: normal;position: relative;background-color: #ffffff}
+
+		h3{font-weight: normal;}
+	.text-center{text-align: center;}
+	.fleft{float: left;}
+	.fright{float: right;}
+	.btn{background-color: #c60a1e;color: #fff;border-radius: 6px;width: 80px;}
+
+	.text-center{text-align: center;}
+	
+	.goosul li{padding:15px 10px;border-bottom: 1px solid #e3e2e6}
+	.goodslil .circle{width: 20px;height: 20px;border: 1px solid #dbdbdb;border-radius: 20px;background-color: #fff;display:block;position: relative;margin-top: 15px}
+	.goodslil .circle:after{content: "";width: 7px;height: 4px;border-left: 1px solid #fff;border-bottom: 1px solid #fff;transform:rotate(-45deg);position: absolute;left: 30%;top: 30%;}
+	
+	.cheeck input[type="checkbox"]:checked+span{background-color: #2e9c9e;}
+	.cheeck input[type="checkbox"]:checked+span:after{display: block;}
+	.cheeck input[type="checkbox"]{display: none;}
+	.goosul li img{margin-right: 0.56rem;}
+	.goodslim h3{font-weight: normal;color: #333;margin-bottom: 0.56rem}
+	.goodslir{padding-right: 2%;}
+	.goodslir h3{color:#c60a1e;text-align: right; }
+	.goodslir div{text-align: right;border: 1px solid #e3e2e6;width: 100%;border-radius: 3px}
+	.goodslir div a{display: inline-block;width: 25%;text-align: center;height: 1.66rem;line-height: 1.66rem;font-size: 1rem;color: #333;}
+	.goodslir div .numd{color: #ddd;}
+	.goodslir div .num{width: 50%;border-left:1px solid #e3e2e6;border-right:1px solid #e3e2e6;border-radius: 6px }
+	.goodslil{width: 10%}
+	.goodslim{width: 68%}
+	.goodslir{width: 22%}
+
+	.foot{background-color: #fff;position: fixed;left: 0;bottom:0;width: 100%;border-top: 1px solid #c0c0c0;}
+
+	.foottop{height: 3.38rem;width: 100%;text-align: right;position: relative;}
+	.foottop a{display: inline-block;height: 2.22rem;text-align: center;line-height: 2.22rem;margin: 10px;font-size: 0.83rem;position: absolute;right: 0;top: 0}
+	.ftopl{padding-top: 15px;margin-right: 100px;}
+	.ftopl h3{font-size: 0.83rem;font-weight: normal;}
+	.ftopl span{color: #c60a1e};
+	.footu{width: 100%}
+	.footul li{width: 33.3%;text-align: center;}
+	.footul li a{display:block;font-size: 0.83rem;color: #333;background-image: url(images/icon.png);background-repeat: no-repeat;background-position: 5% center;-webkit-background-size: 1rem 1rem;background-size: 1rem 1rem;}
+	.footul{border:1px solid #c0c0c0;height: 2.38rem;line-height:2.38rem;}
+	.footul .footli2{border-left: 1px solid #c0c0c0;border-right:1px solid #c0c0c0 ;}
+	.foot .jiesuan:hover{color: #fff;background-color: #8b1221;}
+	
+	</style>
+</head>
+<body>
+<form action="" method="get">
+	<section class="goods">
+		<ul class="goosul ">
+			<li width="100%" class="clearfix">
+				<div class="goodslil fleft">
+				<label class="cheeck">
+					<input type="checkbox" class="" name="mycheck"><span class="circle"></span>
+				</label>
+				</div>
+				<div class="goodslim fleft" >
+					<img src="images/img/portrait.jpg" height="60" width="60" alt="" class="fleft">
+					<h3>深海贝类韩国代购黑白拼接呢绒连衣裙</h3>
+					<p>型号：均码-黑色</p>
+				</div>
+				<div class="goodslir fleft" >
+					<h3>￥389.00</h3>
+					<div><a  class="numd" id="numdown" onclick="reduce()">-</a><a  class="num"  id="number" >1</a><a  class="numu" id="numup" onclick="add()">+</a></div>
+				</div>
+			</li>
+			<li width="100%" class="clearfix">
+				<div class="goodslil fleft">
+				<label class="cheeck">
+					<input type="checkbox" class="" name="mycheck"><span class="circle"></span>
+				</label>
+				</div>
+				<div class="goodslim fleft" >
+					<img src="images/img/portrait.jpg" height="60" width="60" alt="" class="fleft">
+					<h3>深海贝类韩国代购黑白拼接呢绒连衣裙</h3>
+					<p>型号：均码-黑色</p>
+				</div>
+				<div class="goodslir fleft" >
+					<h3>￥389.00</h3>
+					<div><a  class="numd" id="numdown" onclick="reduce()">-</a><a  class="num"  id="number">1</a><a  class="numu" id="numup" onclick="add()" >+</a></div>
+				</div>
+			</li>
+			<li width="100%" class="clearfix">
+				<div class="goodslil fleft">
+				<label class="cheeck">
+					<input type="checkbox" class="" name="mycheck"><span class="circle"></span>
+				</label>
+				</div>
+				<div class="goodslim fleft" >
+					<img src="images/img/portrait.jpg" height="60" width="60" alt="" class="fleft">
+					<h3>深海贝类韩国代购黑白拼接呢绒连衣裙</h3>
+					<p>型号：均码-黑色</p>
+				</div>
+				<div class="goodslir fleft" >
+					<h3>￥389.00</h3>
+					<div><a  class="numd" id="numdown" onclick="reduce()">-</a><a  class="num"  id="number">1</a><a  class="numu" id="numup" onclick="add()" >+</a></div>
+				</div>
+			</li>
+			<li width="100%" class="clearfix">
+				<div class="goodslil fleft">
+				<label class="cheeck">
+					<input type="checkbox" class="" name="mycheck"><span class="circle"></span>
+				</label>
+				</div>
+				<div class="goodslim fleft" >
+					<img src="images/img/portrait.jpg" height="60" width="60" alt="" class="fleft">
+					<h3>深海贝类韩国代购黑白拼接呢绒连衣裙</h3>
+					<p>型号：均码-黑色</p>
+				</div>
+				<div class="goodslir fleft" >
+					<h3>￥389.00</h3>
+					<div><a  class="numd" id="numdown" onclick="reduce()">-</a><a  class="num"  id="number">1</a><a  class="numu" id="numup" onclick="add()" >+</a></div>
+				</div>
+			</li>
+			<li width="100%" class="clearfix">
+				<div class="goodslil fleft">
+				<label class="cheeck">
+					<input type="checkbox" class="" name="mycheck"><span class="circle"></span>
+				</label>
+				</div>
+				<div class="goodslim fleft" >
+					<img src="images/img/portrait.jpg" height="60" width="60" alt="" class="fleft">
+					<h3>深海贝类韩国代购黑白拼接呢绒连衣裙</h3>
+					<p>型号：均码-黑色</p>
+				</div>
+				<div class="goodslir fleft" >
+					<h3>￥389.00</h3>
+					<div><a  class="numd" id="numdown" onclick="reduce()">-</a><a  class="num"  id="number">1</a><a  class="numu" id="numup" onclick="add()" >+</a></div>
+				</div>
+			</li>
+		</ul>
+	</section>
+
+	<section class="foot">
+		<div class="foottop clearfix">
+			<div class="ftopl ">
+				<h3>合计：<span>￥588.00</span></h3>
+				<p>不含运费</p>
+			</div>	
+			<!-- <input type="submit" value="结算"> -->
+			<a href="address.html" class="btn jiesuan">结算</a>
+		</div>
+		<ul class="footul clearfix">
+			<li class="fleft">
+				<a href="shb-index.html">微商城</a>
+			</li>
+			<li class="footli2 fleft">
+				<a href="shb-kefuguanli.html">客服管理</a>
+			</li>
+			<li class="fleft">
+				<a href="service">个人中心</a>
+			</li>
+		</ul>
+	</section>
+	</form>
+	<script>
+// 	var numds=document.getElementsByClassName('numd');
+// 	var nums=document.getElementsByClassName('num');
+// 	var numus=document.getElementsByClassName('numu');
+// // var num;var numd;
+// // 	 a=1;
+// 	var num1=nums[0];
+// 	var numd1=numds[0];
+// 		var a=parseInt(num1.innerHTML);
+// 		alert(numd1.innerHTML);
+// 		 numd1.oncilick=function(){
+// 			alert(1);
+// 			num1.innerHTML=a-1;
+// 	      };
+// 	    // num=nums[1];
+// 		// numd=numds[1];
+// 		// a=parseInt(num.innerHTML);
+// 		//  num.oncilick=function(){
+// 		// 	alert(1);
+// 		// 	num.innerHTML=a-1;
+// 	    //      };
+
+
+
+
+
+
+	// var num=document.getElementById('number');
+	// var numb=document.getElementById('numdown');
+	// var numu=document.getElementById('numup');
+	// function reduce(){
+	// 	var a=parseInt(num.innerHTML)
+	// 	a--;
+	// 	if(a<1){a=1;
+	// 		numb.style.color="#e3e2e6";}
+	// 	num.innerHTML=a;
+		
+	// }
+	// function add() {
+	// 	var a=parseInt(num.innerHTML)
+	// 	a++;
+	// 	num.innerHTML=a;
+	// 	numb.style.color="black";
+	// }
+	// 
+
+	var nums=document.getElementsByClassName('num');
+	var numds=document.getElementsByClassName('numd');
+	var numus=document.getElementsByClassName('numu');
+// alert(numds.length)
+	    for (var i = numus.length - 1; i >= 0; i--) {
+	    	numus[i].onclick=function(){
+	    		for (var a = numus.length - 1; a >= 0; a--) {
+	    			if(numus[a]==this){
+	    				numds[a].style.color="black"
+
+	    				// alert(numds[a].color);
+	    				nums[a].innerHTML=parseInt(nums[a].innerHTML)+1
+	    			}
+	    		}
+	    	}
+	    }
+
+	    for (var i = numds.length - 1; i >= 0; i--) {
+	    	numds[i].onclick=function(){
+	    		for (var a = numds.length - 1; a >= 0; a--) {
+	    			if(numds[a]==this){
+	    				if (parseInt(nums[a].innerHTML)>1) {
+	    					nums[a].innerHTML=parseInt(nums[a].innerHTML)-1
+	    				}else{
+	    					numds[a].style.color="#ddd"
+	    				}
+	    				
+	    			}
+	    		}
+	    	}
+	    }
+
+	</script>
+</body>
+</html>

@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>深海贝</title>
+	
+	<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<!-- 视口大小  原始比例1.0  最大缩放1.0 最小缩放1.0  不让用户缩放 -->
+<meta name="apple-mobile-web-app-capable" content="yes">
+<!-- 在苹果手机里面 看上去像app应用 -->
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<!-- 苹果手机的状态栏是 黑色 -->
+<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/bootstrap.css"><script src="js/TouchSlide.1.1.js"></script>
+<style>	
+html{font-size: 18px;}
+body{font-size: 12px;font-family:roboto, \65B9\6B63\5170\4EAD\7EA4\9ED1\7B80\4F53, \5FAE\8F6F\96C5\9ED1, "Helvetica Neue", Helvetica, Arial, sans-serif;background-color: rgb(230,230,230); }
+.text-center{text-align: center;}
+.fr{float: right;}
+.fl{float:left;}
+.w3{width: 30%;margin-right: 5%;}
+.w6{width: 60%}
+	/* 本例子css -------------------------------------- */
+	
+
+	footer{height:2.72rem;width: 100%;position: fixed;left: 0;bottom: 0;z-index: 100}
+	.foot{background:rgb(255,255,255); float: right;width: 100%;height: 100%}
+	.foot li{float: left;width: 33.3%;height: 100%}
+	.foot li a{display: block;color:#777;text-align: center;height: 2.72rem;line-height: 2.72rem;font-size: 0.78rem; }
+	.foot li .foot2{border-left: 1px solid #999;border-right: 1px solid #999;}
+	.foot span img{height: 0.7rem;width:auto;}
+	.foot span{margin-right: 0.4rem;}
+		
+	.titel p{height: 2.44rem;width:100%;line-height: 2.44rem;margin-left:1.66rem;font-size: 0.83rem;  }
+	.address{width: 90%;background-color: #fff;margin-left:5%; overflow: hidden;}
+	.wap{font-size:0.82rem;  padding-bottom: 0.83rem;margin-left:5%;}
+	/*label{width: 30%;padding-right: 5%;float: left; margin-top: 5%;font-size: 0.83rem;height: 1.5rem;line-height: 1.5rem;font-size: 0.83rem;}*/
+	input{width: 60%;height: 1.5rem;line-height: 1.5rem;margin-top: 5%;border-bottom: 1px solid #777;border:none;font-size: 0.83rem;border-bottom: 1px solid #CBC8C8;outline: none;}
+	form{padding-bottom: 1rem;}
+
+		
+	.titel1 p{height: 2.44rem;width:100%;line-height: 2.44rem;margin-left:1.66rem;font-size: 0.62rem;  }
+	.wap1{padding: 0.83rem;font-size:0.82rem;padding-right: 5%;}
+	.area {padding-left: 0.83rem;padding-right:0.83rem;height:1.5rem;margin-top: 0.5rem;}
+	.area1{height: 5rem;margin-top: 0.5rem;}
+	.adda{padding-bottom: 1.5rem;margin-left:5%; }
+	.affirm{height: 2.2rem;width: 100%; margin-bottom:4.38rem;padding: 0.83rem}
+	.affirm a{height:2.2rem;width: 8rem;background-color:#c60a1e;color:#fff;display: inline-block;text-align: center; line-height: 2.2rem;font-size: 0.83rem ;border-radius: 5px;}
+	/*.affirm a:hover{background-color: #920e0e}*/
+	
+	 input:active{outline-style: none;}
+		.select-head{padding:10px 5%;}
+		.select-te{width:100%;height:88px;background-color:#f3f3f3;font-size: 14px;padding:15px 10px;line-height:25px;position: relative;box-shadow: 3px 3px 5px #b9b9b9;border: 1px solid #b9b9b9;border-radius: 3px;margin-bottom: 10px;}
+		.select-te:after{content: "√";width:1rem;height: 1rem;border-radius: 1rem;background-color: #2d9c9e;display: none;color: #eee;text-align: center;line-height: 1rem;position: absolute;right: 0.83rem;top: 10%;}
+		.select-head label input{display: none;}
+		.select-head label input[type="radio"]:checked+p:after{display: block;
+		}
+		
+		/*.select-te:hover{background-color: #bbb;}
+		.text-se{position:relative;color:#333;display: block;}
+		.text-se:hover{text-decoration: none;color:#000;background:url(images/selected.png) no-repeat right center;background-color: #bbb;}
+		.text-se:active{background:url(images/selected.png) no-repeat right center;}*/
+		.queren{text-align: center;}
+		.queren input{margin-top:0.83rem;display: inline-block;font-weight: bolder;}
+		.btnaa{height:2.2rem;width: 8rem;background-color:#c60a1e;color:#fff;display:block;text-align: center; line-height: 2.2rem;font-size: 0.83rem ;border-radius: 5px;}
+		/*.btnaa:hover{background-color: #920e0e}*/
+
+	
+</style>
+<link rel="stylesheet" href="css/sm.css" media="screen and (min-width:568px)">
+<link rel="stylesheet" href="css/big.css" media="screen and (min-width:720px)">
+
+</head>
+<body> 
+<form action="shbfukuan.html">
+	<div class="select-head">
+	<label >
+		<input type="radio" name="addid" ><p class="select-te">姓名15100002211<br>上海市静安区西康路618号华通大厦</p>
+		</label>
+		<label>
+		<input type="radio"name="addid">
+			<p class="select-te">姓名15100002211<br>上海市静安区西康路618号华通大厦</p>
+		</label>
+		<div class="queren">
+			<input type="submit" value="确认收货地址" class="btn btn-pink btnaa">
+		</div>
+	</div>
+</form>
+	<div class="titel">
+		<p class="">添加新地址</p>
+	</div>
+	<div class="address">
+	<div class="wap">
+	<form action="">
+	<label for="">收件人</label>
+	<input type="text" placeholder="请输入收件人姓名">
+	</form>
+	<form action="">
+	<label for="">手机号码</label>
+	<input type="text" placeholder="请输入收件人手机码号">
+	</form>
+	</div>
+	</div>
+
+		<div class="titel1">
+		<p class="">*如果由其他人收货，请填写收货人的手机号码</p>
+		</div>
+	<div class="address">
+	<ul class="wap1">
+	<li class=" area1 w3 fl">所在地区</li>
+	<li ><select class="fl area w6" >
+	  <option value ="1">上海</option>  
+	  <option value ="2">北京</option>  
+	  <option value ="3">南京</option>  
+		</select>  </li>
+
+	<li ><select class="fl area w6">  
+  <option value ="1">选择市</option>  
+  <option value ="2">上海</option>  
+  <option value="3">北京</option>  
+  <option value="4">南京</option>  
+	</select>  </li>
+
+	<li ><select class="fl area w6">  
+  <option value ="1">选择区</option>  
+  <option value ="2">浦东新区</option>  
+  <option value ="3">浦西区</option>  
+</select> </li>
+	</ul>
+
+	<form action="" class="adda">
+	<label for="">详细地址</label>
+	<input type="text" placeholder="请输入街道详细地址">
+	</form>
+	</div>
+
+	<div class="affirm">
+	<p class="text-center"><a href="shbfukuan.html">确认收货地址</a></p>
+	</div>
+		
+		<footer>
+			
+				<ul class="foot">
+					<li><a href="shb-index.html"><span><img src="images/icon.png	" alt="shb-index.html"></span>微商城</a></li>
+					<li><a href="shb-kefuguanli.html" class="foot2"><span><img src="images/icon.png" alt=""></span>客服管理</a></li>
+					<li><a href="service.html"><span><img src="images/icon.png	" alt=""></span>个人中心</a></li>
+				</ul>
+			
+		</footer>
+				
+</body>
+</html>

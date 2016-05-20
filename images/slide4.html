@@ -1,0 +1,145 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<style type="text/css">
+	#inner{ width:4900px;}
+	/*
+	包住所有的图片  宽度为980*5=4900  让图片横向平铺
+	*/
+	#slide{ width:980px; overflow:hidden;}
+	/*
+	包住inner 让图片只显现1张的宽度  980，，其他隐藏；
+	*/
+	#out{ position:relative; width:980px;}
+	
+	/*让小图片有一个定位的参照也就是 out */
+	#left{ position:absolute; top:150px; left:100px; cursor:pointer;}
+	/* 绝对定位图片 左右 参照 out*/
+	#right{ position:absolute; top:150px; right:100px;cursor:pointer;}
+</style>
+
+<script type="text/javascript">
+function init(){
+	var tip=document.getElementById("tip");
+	var index=0;//默认第0张图片
+	var slide=document.getElementById("slide");
+	//得到slide
+	var left=document.getElementById("left");
+	//得到left
+	
+	
+	
+	
+	var autoId=0;
+	var animateId=0;
+	
+	left.onclick=function(){
+		index--;
+		//当鼠标单击是让 index加一  ，，
+	if(index>4){index=0;}else if(index<0){index=4;}
+		clearTimeout(autoId);
+change();
+		}
+		
+	var right=document.getElementById("right");
+		right.onclick=function(){
+			index++;
+			if(index>4){index=0;}else if(index<0){index=4;}
+			
+				clearTimeout(autoId);
+			change();
+			}
+    
+		
+		
+		autoId=setTimeout(autoChange,2000);
+	
+	
+
+	
+	function autoChange(){
+			index++;
+			if(index>4){index=0;}else if(index<0){index=4;}
+			change();		
+
+		}
+	
+			
+	function change(){
+		clearTimeout(autoId);
+		clearInterval(animateId);
+		if(index==0){
+			slide.scrollLeft=0+"px";
+			}
+		
+		animateId=setInterval(animate,10);
+		//通过index判断是第几张图片 让scrollLeft= index*980;
+		//默认是第0张  0*980  1*980.。。。。。
+			
+	}
+	function animate(){
+			
+		var left=parseInt(slide.scrollLeft);
+		
+		
+		tip.innerHTML=left+"---"+index;
+		
+		var topos=index*980;
+		
+		var dis=topos-left;
+		
+		//var bigg=index*980;
+		
+		
+		
+			slide.scrollLeft=left+2+Math.floor(dis/100);
+			
+		if(left>=topos&&left!=0){
+			slide.scrollLeft=topos;
+			
+			if(autoId!=null){
+			autoId=setTimeout(autoChange,2000);
+			}
+			clearInterval(animateId);
+		
+			}
+		
+		
+		
+		}
+
+	slide.onmouseover=function(){clearTimeout(autoId);autoId=null; }
+	slide.onmouseout=function(){autoId=setTimeout(autoChange,2000);}
+	
+	
+	
+	
+	
+	}
+		
+
+</script>
+
+</head>
+
+<body onload="init();">
+<div id="out">
+    <div id="slide">
+        <div id="inner">
+            <img src="pic1.jpg"><img src="pic2.jpg"><img src="pic3.jpg"><img src="pic4.jpg"><img src="pic5.jpg">
+        </div>
+        <img src="left.png" id="left">
+        <img src="right.png" id="right">
+    </div>
+    
+</div>
+<p id="tip"></p>
+<script language="javascript">
+
+	
+</script>
+
+</body>
+</html>

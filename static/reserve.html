@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="format-detection" content="telephone=no">
+<title>深海贝类-预约</title>
+<link rel="stylesheet" type="text/css" href="../css/basic.css" />
+<link rel="stylesheet" type="text/css" href="../css/theme.css" />
+<link rel="stylesheet" type="text/css" href="../css/common.css" />
+<script src="../js/jquery-1.8.2.min.js"></script>
+</head>
+<body>
+<div class="wrapper">
+	<div class="reserve_goods pr clearfix">
+		<a href="#" class="reserveImg fl block"><img src="../images/img/reserve.jpg" class="response_img" alt="图片" /></a>
+		<a href="#" class="fl block red fb f7 reservePrice">￥588.00</a>
+		<span class="pa"></span>
+	</div>
+	<div class="reserve_size">
+		<label class="f4">型号尺码</label>
+		<div class="clearfix f3 mt12">
+			<a href="#" class="fl current">均码-黑色</a>
+			<a href="#" class="fl">均码-粉红色</a>
+			<a href="#" class="fl">均码-粉红色</a>
+			<a href="#" class="fl">均码-粉红色</a>
+		</div>
+	</div>
+	<div class="reserve_time f4">
+		<ul>
+			<li class="mb5 clearfix select_store">
+				<label class="tr in_b fl">预约时间</label>
+				<input id="beginTime" class="kbtn fl" />
+				<div id="datePlugin"></div>
+				<div class="selected_box fl selected_box1">
+					<input type="text" readonly="readonly" class="pl5" value="上午9:00-12:00" id="myselect">
+					<ul class="select_ul pa none" >
+						<li>上午9:00-12:00</li>
+						<li>下午13:00-15:30</li>
+						<li>下午15:30-16:00</li>
+					</ul>
+				</div>
+			</li>
+			<li class="mb5 clearfix select_store">
+				<label class="tr in_b fl">选择门店</label>
+				<div class="selected_box fl">
+					<input type="text" readonly="readonly" class="pl5" value="浙江杭州店" id="myselect">
+					<ul class="select_ul pa none" >
+						<li>浙江杭州店</li>
+						<li>广州深圳店</li>
+						<li>上海木木店</li>
+					</ul>
+				</div>
+			</li>
+			<li class="mb5 clearfix">
+				<label class="tr in_b fl">备注</label>
+				<input type="text" class="txt fl" />
+			</li>
+		</ul>
+	</div>
+	<div class="reserve_time f4">
+		<ul>
+			<li class="mb5 clearfix">
+				<label class="tr in_b fl">称呼</label>
+				<input type="text" class="txt txt0 fl" />
+				<div class="selected_box fl">
+					<input type="text" readonly="readonly" class="pl5" value="女士" id="myselect">
+					<ul class="select_ul pa none" >
+						<li>男士</li>
+						<li>女士</li>
+					</ul>
+				</div>
+			</li>
+			<li class="mb5 clearfix">
+				<label class="tr in_b fl">联系电话</label>
+				<input type="text" class="txt txt1 fl" />
+			</li>
+			<li class="mb5 clearfix">
+				<label class="tr in_b fl">联系地址</label>
+				<input type="text" class="txt fl" />
+			</li>
+		</ul>
+	</div>
+	<div class="reserve_btn tc">
+		<input type="button" value="继续购物" class="continue_shop" />
+		<input type="button" value="确认预约" class="continue_shop ml5 reserveBtn" />
+	</div>
+	
+</div>
+<footer>
+	<div class="inner_footer clearfix f7">
+		<a href="#" class="fl tc in_b">微商城</a>
+		<a href="#" class="fl tc in_b">客服管理</a>
+		<a href="#" class="fl tc in_b">个人中心</a>
+	</div>
+</footer>
+
+<script src="../js/public.js"></script>
+<script src="../js/date.js" ></script>
+<script src="../js/iscroll.js" ></script>
+<script>
+$(function(){
+	$(".reserve_time").last().addClass("resreveLast");
+	$('#beginTime').date();
+	$('#endTime').date({theme:"datetime"});	
+})
+</script>
+</body>
+</html>
